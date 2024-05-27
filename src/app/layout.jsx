@@ -5,27 +5,26 @@ import styles from './page.module.css';
 import { Container } from "@mui/material";
 import Image from "next/image";
 import clickIcon from '../../public/click.svg'
-import { Suspense } from "react";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
 
   return (
     <html lang="ru">
       <body className={raleway.className}>
       <main className={styles.main}>
-      <Container>
+      <Container className={styles.mainContainer}>
         <Container fixed className={styles.title}>
-          <div className={styles.pokemonApi}>
+          <Container className={styles.pokemonApi}>
             <p>ПОКЕМОНЫ API</p>
-          </div>
-          <div className={styles.clickPokemon}>
+          </Container>
+          <Container className={styles.clickPokemon}>
             <Image src={clickIcon} alt="Кликни" />
             <div>
               <p>Нажмите на нужного покемона</p>
             </div>
-          </div>
+          </Container>
         </Container>
           {children}
       </Container>
@@ -34,3 +33,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+export default RootLayout;

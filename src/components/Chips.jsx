@@ -1,4 +1,5 @@
 "use client";
+// Клиентский компонент, потому что нам нужны состояния и вызовы из onClick
 import { Chip, Container } from "@mui/material";
 import styles from "../app/page.module.css";
 import { useState } from "react";

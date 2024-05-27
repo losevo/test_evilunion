@@ -5,10 +5,18 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .container {
   padding: 0 150px;
+}
+
+.mainContainer {
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .title {
@@ -30,12 +38,15 @@
 
 .pokemonApi {
   display: block;
-  width: 100px;
+  width: 120px;
+  padding: 7px;
+  border: 1px white solid;
+}
+
+.pokemonApi p {
   height: 14px;
   line-height: 14px;
   font-weight: 500;
-  padding: 7px;
-  border: 1px white solid;
 }
 
 .clickPokemon {
@@ -44,7 +55,9 @@
   width: 150px;
   gap: 10px;
   height: 30px;
+  padding: 0;
 }
+
 
 .clickPokemon div {
   height: 24px;
@@ -54,6 +67,7 @@
   margin: 0 auto;
   font-weight: 600;
   line-height: 12px;
+  font-size: 12px;
 }
 
 .chipsgroup span {
